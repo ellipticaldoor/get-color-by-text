@@ -1,4 +1,4 @@
-# Get Text Color
+# Get color by text 😎
 
 > Match always the same random color to a string of text.
 
