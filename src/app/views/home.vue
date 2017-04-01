@@ -4,7 +4,7 @@
 	.links
 		a(href='https://ellipticaldoor.com/') My Blog
 		span |
-		a(href='https://github.com/ellipticaldoor/get-text-color') Github
+		a(href='https://github.com/ellipticaldoor/get-color-by-text') Github
 
 	textarea(v-model='text', autofocus)
 
