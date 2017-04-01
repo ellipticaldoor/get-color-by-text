@@ -1,16 +1,15 @@
 <template lang='pug'>
 
-#home
-	h2 Hello!
+#home(:style='`background:${ color }`')
+	.links
+		a(href='https://ellipticaldoor.com/') My Blog
+		span |
+		a(href='https://github.com/ellipticaldoor/get-text-color') Github
 
-	p some text
+	textarea(v-model='text', autofocus)
+
+	.color {{ color }}
 
 </template>
 
-<script>
-import './home.sass'
-
-export default {
-	name: 'home',
-}
-</script>
+<script src='./home' /></script>
