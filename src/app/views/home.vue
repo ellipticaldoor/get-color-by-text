@@ -9,7 +9,6 @@
 	textarea(v-model='text', autofocus)
 
 	.color {{ color }}
-	.color {{ slug }}
 
 </template>
 

@@ -34,7 +34,7 @@ export default {
 		const query = this.$route.query
 
 		if (Object.keys(query).length !== 0)
-			this.text = query.q
+			this.text = query.q.replace(/_/g, ' ')
 
 		this.update()
 	},
