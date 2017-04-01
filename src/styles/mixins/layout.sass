@@ -1,0 +1,53 @@
+=layout()
+	#app
+		display: flex
+		position: fixed
+		font-family: $text-font
+		flex-direction: column
+		font-style: normal
+		background: $background
+		color: $text-color
+		width: 100vw
+		height: 100vh
+		word-wrap: break-word
+		text-rendering: optimizeLegibility
+		-webkit-font-smoothing: antialiased
+		-moz-osx-font-smoothing: grayscale
+		-moz-font-feature-settings: 'liga' on
+		touch-action: manipulation
+
+		@media (max-width: 35.0rem)
+			flex-direction: column-reverse
+
+		a, a:visited
+			color: $link-color
+			text-decoration: none
+
+			&:hover
+				color: lighten($link-color, 10%)
+				text-decoration: underline
+
+		p
+			white-space: pre-line
+
+		.material-icons
+			margin: .15em
+
+		// Mixins
+		+custom-inputs
+		+card
+		+view_title
+		+tabs
+
+		#app_content
+			flex: 1
+			position: relative
+			overflow-x: hidden
+			overflow-y: scroll
+			height: 100%
+
+			.view
+				display: flex
+				flex-direction: column
+				overflow: auto
+				height: $content-height

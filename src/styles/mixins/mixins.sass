@@ -1,0 +1,89 @@
+// Layouts mixins
+
+=flex-center()
+	display: flex
+	align-items: center
+	justify-content: center
+
+=reset()
+	padding: 0
+	margin: 0
+	border: 0
+
+
+// Components general mixins
+
+=card()
+	.card, fieldset
+		background: $nav-background
+		box-shadow: $box-shadow
+		padding: 2em
+		margin: 1em
+		border-radius: $radius-amount
+		width: 100%
+		max-width: 600px
+
+		@media (max-width: 35.0rem)
+			margin: 1em 0
+
+=view_title()
+	.view_title
+		+flex-center
+		font-size: 110%
+		font-weight: 500
+		background: $view-title-bg-color
+		color: $view-title-color
+		cursor: default
+		width: 100%
+		min-height: 50px
+		-webkit-user-select: none
+		user-select: none
+
+		@media (min-width: 35.0rem)
+			display: none
+
+=tabs()
+	.tabs
+		display: flex
+
+		span
+			+flex-center
+			padding: .5em 1em
+			border-bottom: 1px solid $light-color
+			width: 100%
+
+		.active
+			border-bottom: 3px solid $light-color
+
+=custom-inputs()
+	input, select
+		color: $text-color
+		border-radius: $radius-amount
+		max-width: 400px
+		min-height: 30px
+
+	select:hover, select:focus
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#{ $secondary-color }" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>')
+		cursor: pointer
+		border-color: $secondary-color
+
+	.button, button, input[type='button'], input[type='reset'], input[type='submit']
+		+flex-center
+		background: $secondary-color
+		box-shadow: $box-shadow
+		color: $background
+		border: 0
+		border-radius: $radius-amount
+		min-height: 38px
+
+	.button:hover, button:hover, input[type='button']:hover, input[type='reset']:hover, input[type='submit']:hover
+		background: $hover-button-color
+
+	input:focus, select:focus, textarea:focus
+		border-color: $secondary-color
+
+	input::-webkit-input-placeholder
+		color: transparentize($secondary-color, .5)
+
+	input::-moz-placeholder
+		color: transparentize($secondary-color, .1)

@@ -1,0 +1,26 @@
+// General
+@import ../styles/colors
+@import ../styles/mixins/mixins.sass
+@import ../styles/mixins/layout.sass
+
+// Theme
+@import ../styles/themes/light
+
+// Icons
+$radius-amount: 2px
+$nav-height: 40px
+$content-height: calc(100vh - #{ $nav-height })
+
+// Nav options
+$nav-up-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 1px
+$nav-down-shadow: rgba(0, 0, 0, 0.1) 0px -1px 2px 1px
+
+// General vars
+$box-shadow: $nav-up-shadow
+$shadow: 0px 1px 2px rgba(0, 0, 0, 0.1)
+
+// Fonts
+$text-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif
+
+// Layout
++layout
