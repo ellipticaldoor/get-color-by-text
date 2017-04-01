@@ -1,6 +1,6 @@
-# web-app template
+# Get Text Color
 
-> Create vue apps easily with webpack/cordova for the web, ios and android.
+> Match always the same random color to a string of text.
 
 ## Vue / webpack / cordova workflow
 ``` shell
