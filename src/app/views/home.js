@@ -20,7 +20,7 @@ export default {
 
 	methods: {
 		update () {
-			this.$router.push(`/?q=${ this.slug }`)
+			this.$router.replace(`/?q=${ this.slug }`)
 		},
 	},
 
