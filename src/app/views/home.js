@@ -20,7 +20,7 @@ export default {
 
 	methods: {
 		update () {
-			this.$router.push(`/?${ this.slug }`)
+			this.$router.push(`/?q=${ this.slug }`)
 		},
 	},
 
@@ -31,6 +31,11 @@ export default {
 	},
 
 	created () {
+		const query = this.$route.query
+
+		if (Object.keys(query).length !== 0)
+			this.text = query.q
+
 		this.update()
 	},
 }
