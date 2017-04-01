@@ -7,7 +7,7 @@
 
 <script>
 import './app.sass'
-import Home from './views/Home.vue'
+import Home from './views/home.vue'
 
 export default {
 	name: 'app',
