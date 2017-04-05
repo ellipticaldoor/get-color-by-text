@@ -14,7 +14,7 @@ export default {
 		},
 
 		slug () {
-			return this.text.replace(/\s+/g, '_')
+			return encodeURIComponent(this.text)
 		},
 	},
 
@@ -34,7 +34,7 @@ export default {
 		const query = this.$route.query
 
 		if (Object.keys(query).length !== 0)
-			this.text = query.q.replace(/_/g, ' ')
+			this.text = query.q
 
 		this.update()
 	},
