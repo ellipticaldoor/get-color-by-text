@@ -12,20 +12,16 @@ export default {
 		color () {
 			return '#' + md5(`'${ this.text }'`).substring(0, 6)
 		},
-
-		slug () {
-			return this.text.replace(/\s+/g, '_')
-		},
 	},
 
 	methods: {
 		update () {
-			this.$router.replace(`/?q=${ this.slug }`)
+			this.$router.replace(`/?q=${ this.text }`)
 		},
 	},
 
 	watch: {
-		slug () {
+		text () {
 			this.update()
 		},
 	},
